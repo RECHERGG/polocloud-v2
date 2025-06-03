@@ -11,7 +11,7 @@ class SdkInstanceTest {
     fun testInstance() {
         // This test is to ensure that the Polocloud instance is created correctly.
         // The actual test logic can be expanded as needed.
-        val polocloudInstance = Polocloud.instance
+        val polocloudInstance = Polocloud.instance()
         assertNotNull(polocloudInstance) { "Polocloud instance should not be null" }
     }
 
@@ -19,7 +19,7 @@ class SdkInstanceTest {
     @DisplayName("Test Service Provider Retrieval")
     fun testServiceProvider() {
         // This test checks if the service provider can be retrieved from the Polocloud instance.
-        val serviceProvider = Polocloud.instance.serviceProvider()
+        val serviceProvider = Polocloud.instance().serviceProvider()
         assertNotNull(serviceProvider) { "Service provider should not be null" }
     }
 
@@ -27,7 +27,7 @@ class SdkInstanceTest {
     @DisplayName("Test Group Provider Retrieval")
     fun testGroupProvider() {
         // This test checks if the group provider can be retrieved from the Polocloud instance.
-        val groupProvider = Polocloud.instance.groupProvider()
+        val groupProvider = Polocloud.instance().groupProvider()
         assertNotNull(groupProvider) { "Group provider should not be null" }
     }
 
@@ -35,7 +35,7 @@ class SdkInstanceTest {
     @DisplayName("Test Plugin Provider Retrieval")
     fun testSdkResponse() {
         // This test checks if the plugin provider can be retrieved from the Polocloud instance.
-        val polocloudInstance = Polocloud.instance
+        val polocloudInstance = Polocloud.instance()
 
         assert(polocloudInstance.available()) { "Plugin provider should be available" }
     }

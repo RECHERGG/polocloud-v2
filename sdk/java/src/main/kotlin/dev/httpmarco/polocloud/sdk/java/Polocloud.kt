@@ -8,10 +8,14 @@ class Polocloud {
 
     private val grpcClient = SdkGrpcClient()
     private val serviceProvider = ServiceProvider()
-    private val groupProvider = GroupProvider()
+    private val groupProvider = GroupProvider(grpcClient.channel)
 
     companion object {
-        val instance = Polocloud()
+        private val instance = Polocloud()
+
+        fun instance(): Polocloud {
+            return instance
+        }
     }
 
     fun serviceProvider() = serviceProvider
