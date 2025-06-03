@@ -11,7 +11,13 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
-    implementation("com.github.ajalt.mordant:mordant:3.0.2")
+
+    implementation(libs.bundles.proto)
+    implementation(libs.grpc.netty)
+    implementation(project(":proto"))
+
+    implementation(libs.bundles.terminal)
+    implementation(libs.bundles.runtime)
 }
 
 tasks.test {

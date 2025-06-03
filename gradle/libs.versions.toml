@@ -2,13 +2,42 @@
 version = "1.0"
 
 [versions]
+
+# networking
 grpc = "1.73.0"
 
+# terminal
+mordant = "3.0.2"
+
+slf4j = "2.0.7"
+log4j = "2.20.0"
+
+# runtime
+docker = "3.5.1"
+k8s = "7.3.1"
+
 [libraries]
+
+# networking
 grpc-netty = { group = "io.grpc", name = "grpc-netty", version.ref = "grpc" }
 grpc-protobuf = { group = "io.grpc", name = "grpc-protobuf", version.ref = "grpc" }
 grpc-stub = { group = "io.grpc", name = "grpc-stub", version.ref = "grpc" }
 grpc-services = { group = "io.grpc", name = "grpc-services", version.ref = "grpc" }
 
+# terminal
+mordant = { group = "com.github.ajalt.mordant", name = "mordant", version.ref = "mordant" }
+
+slf4j = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
+log4j-api = { group = "org.apache.logging.log4j", name = "log4j-api", version.ref = "log4j" }
+log4j-core = { group = "org.apache.logging.log4j", name = "log4j-core", version.ref = "log4j" }
+log4j-slf4j2-impl = { group = "org.apache.logging.log4j", name = "log4j-slf4j2-impl", version.ref = "log4j" }
+
+# runtime
+docker = { group = "com.github.docker-java", name = "docker-java", version.ref = "docker" }
+docker-http = { group = "com.github.docker-java", name = "docker-java-transport-httpclient5", version.ref = "docker" }
+k8s = { group = "io.fabric8", name = "kubernetes-client", version.ref = "k8s" }
+
 [bundles]
 proto = ["grpc-protobuf", "grpc-stub", "grpc-services"]
+terminal = ["mordant", "slf4j", "log4j-api", "log4j-core", "log4j-slf4j2-impl"]
+runtime = ["docker", "docker-http", "k8s"]
