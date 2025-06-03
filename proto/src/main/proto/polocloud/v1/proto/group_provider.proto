@@ -2,6 +2,19 @@ syntax = "proto3";
 
 package dev.httpmarco.polocloud.v1.proto;
 
+service GroupProviderHandler {
+  rpc find(FindRequest) returns (FindResponse);
+}
+
+message FindRequest {
+  string name = 1;
+}
+
+message FindResponse {
+  repeated GroupSnapshot groups = 1;
+}
+
+
 message GroupSnapshot {
   string name = 1;
   GroupType type = 2;

@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("com.github.ajalt.mordant:mordant:3.0.2")
 }
 
 tasks.test {

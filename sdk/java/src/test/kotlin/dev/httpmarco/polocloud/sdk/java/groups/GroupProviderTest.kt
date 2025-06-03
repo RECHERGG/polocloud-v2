@@ -11,7 +11,6 @@ class GroupProviderTest {
         val groupProvider = GroupProvider()
         val groups = groupProvider.find()
 
-        TODO()
     }
 
     @Test

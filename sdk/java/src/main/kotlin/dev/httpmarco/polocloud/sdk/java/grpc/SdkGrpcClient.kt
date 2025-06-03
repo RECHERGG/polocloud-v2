@@ -8,5 +8,4 @@ class SdkGrpcClient {
     var channel: ManagedChannel? = ManagedChannelBuilder.forTarget("localhost").usePlaintext().build()
 
 
-
 }

@@ -11,7 +11,7 @@ dependencies {
     implementation(libs.bundles.proto)
 
     protobufProtoc("com.google.protobuf:protoc:3.25.7")
-    //implementation("javax.annotation:javax.annotation-api:1.3.2")
+    implementation("javax.annotation:javax.annotation-api:1.3.2")
 }
 
 protobuf {
