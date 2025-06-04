@@ -31,4 +31,16 @@ interface Runtime {
      */
     fun runnable(): Boolean
 
+    /**
+     * Returns the current storage for the runtime.
+     * Only for all service related operations.
+     */
+    fun serviceStorage(): RuntimeServiceStorage
+
+    /**
+     * Returns the current group storage for the runtime.
+     * Only for all group related operations.
+     */
+    fun groupStorage(): RuntimeGroupStorage
+
 }

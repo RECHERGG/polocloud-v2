@@ -7,6 +7,7 @@ import com.github.ajalt.mordant.rendering.TextStyle
 class Logger {
 
     private val terminal = Terminal()
+    private var debugMode = false
 
     fun info(message: String) {
         log("INFO", rgb("#ffffff"), message)
@@ -21,6 +22,7 @@ class Logger {
     }
 
     fun debug(message: String) {
+        if(!debugMode) return
         log("DEBUG", rgb("#969696"), message)
     }
 

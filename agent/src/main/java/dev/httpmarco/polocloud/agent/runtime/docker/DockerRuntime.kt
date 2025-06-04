@@ -5,6 +5,8 @@ import com.github.dockerjava.core.DockerClientImpl
 import com.github.dockerjava.httpclient5.ApacheDockerHttpClient
 import dev.httpmarco.polocloud.agent.logger
 import dev.httpmarco.polocloud.agent.runtime.Runtime
+import dev.httpmarco.polocloud.agent.runtime.RuntimeGroupStorage
+import dev.httpmarco.polocloud.agent.runtime.RuntimeServiceStorage
 import java.util.concurrent.CompletableFuture
 import java.util.concurrent.TimeUnit
 
@@ -32,5 +34,13 @@ class DockerRuntime : Runtime {
             logger.debug("Docker daemon not available: ${e.javaClass.simpleName} - ${e.message}")
             false
         }
+    }
+
+    override fun serviceStorage(): RuntimeServiceStorage {
+        TODO("Not yet implemented")
+    }
+
+    override fun groupStorage(): RuntimeGroupStorage {
+        TODO("Not yet implemented")
     }
 }
