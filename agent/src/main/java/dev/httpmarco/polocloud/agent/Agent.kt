@@ -16,7 +16,9 @@ object Agent {
         logger.info("Starting PoloCloud Agent...")
 
         runtime = Runtime.create()
+
         logger.info("Using runtime: ${runtime::class.simpleName}")
+        logger.info("Load groups: ${runtime.groupStorage().items().size}")
 
     }
 }

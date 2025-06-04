@@ -1,5 +1,3 @@
 package dev.httpmarco.polocloud.agent.groups
 
-class Group(private val data: GroupData) {
-
-}
+data class GroupData(val name: String)

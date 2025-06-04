@@ -18,6 +18,7 @@ dependencies {
 
     implementation(libs.bundles.terminal)
     implementation(libs.bundles.runtime)
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1")
 }
 
 tasks.test {
